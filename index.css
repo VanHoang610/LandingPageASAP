@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --first-font: "Roboto", sans-serif;
+  --color-black: #000000;
+  --bg-dark: #f2bf49;
+  --bg-light: #ffdf74;
+  --bg-white: #ffffff;
+  --bg-gray: #F8F8F8;
+  --br: 4px;
+
+  --h1: normal 700 50px / 1.6 var(--first-font);
+  --h2: normal 700 36px / 1.6 var(--first-font);
+  --h3: normal 700 24px / 1.6 var(--first-font);
+  --common-text: normal 600 16px / 1.8 var(--first-font);
+  --text-p: normal 400 14px / 1.8 var(--first-font);
+}
+
+h1 {
+  font: var(--h1);
+}
+
+h2 {
+  font: var(--h2);
+}
+
+h3 {
+  font: var(--h3);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.mt {
+  margin-top: 100px;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+.footer {
+  background-color: var(--bg-white);
+  color: var(--color-black);
+  text-align: center;
+  padding: 14px 24px 14px 26px;
+}
+
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerNav {
+  margin: 20px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  gap: 20px;
+}
+
+.footerNav ul li a {
+  text-decoration: none;
+  font: var(--common-text);
+  color: var(--color-black);
+}
+.footerNav ul li a i {
+  padding-left: 4px;
+}
+
+.wrapperMenu {
+  display: flex;
+  gap: 40px;
+}
+
+.phoneContainer,
+.footerContact,
+.btnContact {
+  display: flex;
+  align-items: center;
+}
+
+.btnContact {
+  width: 170px;
+  height: 56px;
+}
+
+.phoneContainer {
+  gap: 8px;
+}
+
+.footerContact {
+  gap: 20px;
+}
+
+.iconPhoneContact {
+  width: 25px;
+  height: 37px;
+}
+
+.phone {
+  font-family: var(--first-font);
+  font-weight: 600;
+  line-height: 28px;
+  font-size: 24;
+}
+
+.textPhone {
+  font-family: var(--first-font);
+  font-weight: 400;
+  line-height: 12px;
+  font-size: 11px;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 714px;
+  background-image: url("./image/banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper-content {
+  width: 50.5%;
+  height: 43.8%;
+  padding: 127px 0 0 136px;
+}
+
+.textBanner {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 35px;
+  color: var(--color-black);
+  border-bottom: 10px solid var(--bg-dark);
+  width: 400px;
+  height: 35px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.textSalary {
+  text-decoration: underline;
+  text-decoration-color: var(--color-black);
+  text-decoration-thickness: 1px; /* Đặt độ dày của gạch chân */
+  text-underline-offset: 10px;
+  text-transform: uppercase;
+}
+
+.btn {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;  
+  gap: 12px;
+  background-color: var(--bg-dark);
+  border-radius: var(--br);
+  box-shadow: 8px 8px 8px var(--color-black);
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btnRegister {
+  width: 274px;
+  height: 68px;
+}
+
+.banner .btnRegister {
+  margin-top: 48px;
+}
+
+.btn:hover,
+.btnContact:hover {
+  background-color: var(--bg-light);
+  border-radius: var(--br);
+}
+
+.boxItem {
+  position: relative;
+  width: 270px;
+  height: 131px;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--color-black);
+  border-radius: var(--br);
+  padding: 24px 24px 51px 25px;
+  box-sizing: border-box;
+}
+
+.boxItem > .content .textContent {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.boxItem > .content .subText {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.wrapperIcon {
+  position: absolute;
+  left: 195px;
+  top: 68px;
+}
+
+.wrapper-box {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 650px;
+  width: 100%;
+}
+
+.wrapper-box .container {
+  display: flex;
+  width: 1170px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.aboutUs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  background-image: url("./image/backgroundMap.png");
+  background-size: cover;
+}
+
+.aboutUs .container {
+  max-width: 1170px;
+}
+
+.contentItem {
+  max-width: 370px;
+}
+
+.wrapperContent {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.title {
+  margin: 80px 0 56px 0;
+}
+
+.highlight {
+  display: inline-block;
+  position: relative;
+  z-index: 5;
+}
+
+.highlight::before {
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 10px;
+  background-color: var(--bg-dark);
+  bottom: 15px;
+  left: 0;
+  z-index: -1;
+}
+
+.imageAboutUs {
+  width: 70px;
+  height: 50px;
+}
+
+.titleItem {
+  margin-top: 37px;
+  margin-bottom: 20px;
+}
+
+.titleAboutUs {
+  text-transform: uppercase;
+}
+
+.aboutUs .contentItem .content {
+  font: var(--text-p);
+  text-align: left;
+}
+
+.proceduce {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.proceduce .container {
+  background-color: var(--bg-gray);
+  width: 1329px;
+}
+
+.proceduce .contentItem {
+  width: 270px;
+  background-color: var(--bg-white);
+  height: 196px;
+  border-radius: var(--br);
+}
+
+.proceduce .contentUp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-dark);
+  padding: 0 18px;
+  height: 41.8%;
+  border-radius: var(--br);
+  position: relative;
+}
+
+.proceduce .contentContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 0 80px;
+}
+
+.proceduce .contentUp::after{
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 269px;
+  width: 10%;
+  height: 50%;
+  clip-path: polygon(0 0, 0% 100%, 75% 50%);
+  background-color: var(--bg-dark);
+  z-index: 10;
+}
+
+.proceduce .contentUp::before{
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 270px;
+  width: 10%;
+  height: 50%;
+  clip-path: polygon(0 0, 0 85%, 70% 0);
+  background-color: var(--color-black);
+  z-index: 10;
+}
+
+.proceduce .btnProceduce {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 24px 0 80px;
+}
+
+.wrapperTextNumber {
+  margin-top: auto;
+}
+
+.contentDown {
+  padding: 18px 24px;
+}
+
+.textContent {
+  color: var(--color-black);
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+
+
+.career {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.career .titleCareer {
+  margin-bottom: 56px !important;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.career .wrapperContent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.career .boxContent > .text {
+  text-align: center;
+  font: var(--common-text);
+}
+
+.career .boxContent {
+  background-color: var(--bg-dark);
+  border-radius: var(--br);
+}
+
