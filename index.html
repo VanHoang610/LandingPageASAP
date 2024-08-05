@@ -9,34 +9,44 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link rel="stylesheet" href="./animation/animation.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body>
-    <footer class="footer">
-      <div class="footerContainer">
+    <header class="header">
+      <div class="headerContainer">
         <div class="logoContainer">
           <img src="./image/logo.png" class="logo" />
         </div>
 
         <div class="wrapperMenu">
-          <nav class="footerNav">
+          <nav class="headerNav">
             <ul>
               <li>
-                <a href="#">Giới thiệu <i class="fas fa-chevron-down"></i></a>
+                <a href="#section-about-us"
+                  >Giới thiệu <i class="fas fa-chevron-down"></i
+                ></a>
               </li>
               <li>
-                <a href="#">Quy trình <i class="fas fa-chevron-down"></i></a>
+                <a href="#section-proceduce"
+                  >Quy trình <i class="fas fa-chevron-down"></i
+                ></a>
               </li>
               <li>
-                <a href="#">Ngành nghề <i class="fas fa-chevron-down"></i></a>
+                <a href="#section-career"
+                  >Ngành nghề <i class="fas fa-chevron-down"></i
+                ></a>
               </li>
               <li>
-                <a href="#"
+                <a href="#section-request"
                   >Yêu cầu tuyển dụng <i class="fas fa-chevron-down"></i
                 ></a>
               </li>
             </ul>
           </nav>
-          <div class="footerContact">
+          <div class="headerContact">
             <div class="phoneContainer">
               <img src="./image/iconPhone.png" class="iconPhoneContact" />
               <div class="wrapperPhone">
@@ -44,25 +54,29 @@
                 <p class="textPhone">Thời gian làm việc: 8:00 ~ 18:00</p>
               </div>
             </div>
-            <div class="btnContact">
+            <a href="#section-contact" class="btnContact">
               <div class="btn">
-                <img src="./image/iconContact.png" class="iconContact" />
+                <img
+                  src="./image/iconContact.png"
+                  class="iconContact"
+                  data-id="section-contact"
+                />
                 <p>Liên hệ</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
-    </footer>
-    <section class="banner">
+    </header>
+    <section id="section-banner" class="banner">
       <div class="wrapper-content">
         <p class="textBanner">Việc làm lương cao tại Nhật</p>
         <h1 class="textSalary">Hoàn Toàn Miễn Phí Mức Lương Từ 35-50tr</h1>
-        <div class="btnRegister">
-          <div class="btn">
+        <div href="#section-register" class="btnRegister">
+          <a href="#section-register" class="btn">
             <img src="./image/iconRegister.png" class="iconRegister" />
             <p>Đăng ký nhận tư vấn</p>
-          </div>
+          </a>
         </div>
       </div>
       <div class="wrapper-box">
@@ -107,12 +121,10 @@
       </div>
     </section>
 
-    <section class="aboutUs mt">
+    <section id="section-about-us" class="aboutUs">
       <div class="container">
-        <div class="title">
-          <h2 class="titleAboutUs">
-            Về <span class="highlight">chúng tôi</span>
-          </h2>
+        <div>
+          <h2 class="title">Về <span class="highlight">chúng tôi</span></h2>
         </div>
         <div class="wrapperContent">
           <div class="contentItem">
@@ -181,10 +193,10 @@
       </div>
     </section>
 
-    <section class="proceduce mt">
+    <section id="section-proceduce" class="proceduce mt">
       <div class="container">
-        <div class="title">
-          <h2 class="titleAboutUs">
+        <div>
+          <h2 class="title">
             <span class="highlight">Quy trình</span> ứng tuyển
           </h2>
         </div>
@@ -327,29 +339,31 @@
           </div>
         </div>
         <div class="btnProceduce">
-          <div class="btnRegister">
+          <a href="#section-register" class="btnRegister">
             <div class="btn">
               <img src="./image/iconRegister.png" class="iconRegister" />
               <p>Đăng ký nhận tư vấn</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="career mt">
+    <section id="section-career" class="career mt">
       <div class="container">
-        <div class="titleCareer">
-          <h2><span class="highlight">Ngành nghề</span> tuyển dụng</h2>
+        <div>
+          <h2 class="title animate__fadeInUp">
+            <span class="highlight">Ngành nghề</span> tuyển dụng
+          </h2>
         </div>
         <div class="wrapperContent">
           <div class="boxContent">
-            <!-- <img src="./image/Career_1.png" class="image" /> -->
-              <p class="text">Kỹ sư vận hành máy</p>
+            <img src="./image/Career_1.png" class="image" />
+            <p class="text">Kỹ sư vận hành máy</p>
           </div>
-          <!-- <div class="boxContent">
+          <div class="boxContent">
             <img src="./image/Career_2.png" class="image" />
-            <p class="text">Thiết Kế/Sản Xuất <br />Bảng Mạch Điện Tử</p>
+            <p class="text">Thiết Kế/Sản Xuất Bảng Mạch Điện Tử</p>
           </div>
           <div class="boxContent">
             <img src="./image/Career_3.png" class="image" />
@@ -357,7 +371,7 @@
           </div>
           <div class="boxContent">
             <img src="./image/Career_4.png" class="image" />
-            <p class="text">lắp ráp/điều khiển máy Cơ, robot</p>
+            <p class="text">Lắp ráp/điều khiển máy Cơ, robot</p>
           </div>
           <div class="boxContent">
             <img src="./image/Career_5.png" class="image" />
@@ -374,9 +388,243 @@
           <div class="boxContent">
             <img src="./image/Career_8.png" class="image" />
             <p class="text">Ngôn Ngữ Nhật</p>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
+
+    <section id="section-address" class="address mt">
+      <div class="container">
+        <div>
+          <h2 class="title">
+            <span class="highlight">Địa điểm</span> làm việc tại nhật
+          </h2>
+        </div>
+        <div>
+          <img src="./image/backgroundAddressDetail.png" />
+        </div>
+      </div>
+    </section>
+
+    <section id="section-request" class="request mt">
+      <div class="container">
+        <div>
+          <h2 class="title"><span class="highlight">Yêu cầu</span> chung</h2>
+        </div>
+        <div class="wrapperContent">
+          <div class="boxItem">
+            <img src="./image/request_1.png" class="imageRequest" />
+            <h3>Độ Tuổi</h3>
+            <p>Từ 21 đến 35 tuổi</p>
+          </div>
+          <div class="boxItem">
+            <img src="./image/request_2.png" class="imageRequest" />
+            <h3>Bằng Cấp</h3>
+            <p>Cao đẳng trở lên</p>
+          </div>
+          <div class="boxItem">
+            <img src="./image/request_3.png" class="imageRequest" />
+            <h3>Tiếng Nhật</h3>
+            <p>Năng lực tiếng Nhật - N4</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="section-picture" class="picture mt">
+      <div class="container">
+        <div>
+          <h2 class="title"><span class="highlight">Hình ảnh</span></h2>
+        </div>
+      </div>
+      <div class="content">
+        <div class="imageEmployee">
+          <img src="./image/image_1.png" />
+        </div>
+        <div class="imageEmployee">
+          <img src="./image/image_2.png" />
+        </div>
+        <div class="imageEmployee">
+          <img src="./image/image_3.png" />
+        </div>
+        <div class="imageEmployee">
+          <img src="./image/image_4.png" />
+        </div>
+        <div class="imageEmployee">
+          <img src="./image/image_5.png" />
+        </div>
+        <div class="imageEmployee">
+          <img src="./image/image_6.png" />
+        </div>
+        <div class="imageEmployee">
+          <img src="./image/image_7.png" />
+        </div>
+        <div class="imageEmployee">
+          <img src="./image/image_8.png" />
+        </div>
+        <div class="imageEmployee">
+          <img src="./image/image_9.png" />
+        </div>
+      </div>
+    </section>
+
+    <section class="partner mt">
+      <div class="container">
+        <div>
+          <h2 class="title">
+            <span class="highlight">Đối tác tuyển dụng</span>
+            <span class="new-line">tại nhật bản</span>
+          </h2>
+        </div>
+        <div class="content">
+          <div class="logoPartner">
+            <img src="./image/logoPanasonic.png" class="logo" />
+          </div>
+          <div class="logoPartner">
+            <img src="./image/logoDaikin.png" class="logo" />
+          </div>
+          <div class="logoPartner">
+            <img src="./image/logoAisin.png" class="logo" />
+          </div>
+          <div class="logoPartner">
+            <img src="./image/logoShowa.png" class="logo" />
+          </div>
+          <div class="logoPartner">
+            <img src="./image/logoSharp.png" class="logo" />
+          </div>
+          <div class="logoPartner">
+            <img src="./image/logoHonda.png" class="logo" />
+          </div>
+          <div class="logoPartner">
+            <img src="./image/logoToyota.png" class="logo" />
+          </div>
+          <div class="logoPartner">
+            <img src="./image/logoApple.png" class="logo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-contact" class="contact">
+      <div class="container">
+        <h2 class="title">
+          <span class="highlight">Liên lạc</span> với chúng tôi
+        </h2>
+        <div class="containerContact">
+          <div class="wrapperContact">
+            <div class="boxContact">
+              <div class="btnHotline">
+                <div class="btn">
+                  <img src="./image/iconHotline.png" class="icon" />
+                  <p>Hotline</p>
+                </div>
+              </div>
+              <div class="contentContact">
+                <img src="./image/phonebg.png" class="iconPhone" />
+                <div class="textContact">
+                  <h4>0287 307 2234</h4>
+                  <p>thời gian làm việc 8:00 ~ 18:00</p>
+                </div>
+              </div>
+            </div>
+            <div class="boxContact">
+              <div class="btnHotline">
+                <div class="btn">
+                  <img src="./image/iconFacebook.png" class="iconFacebook" />
+                  <p>Tư vấn</p>
+                </div>
+              </div>
+              <div class="contentContact">
+                <img src="./image/imageQR.png" class="iconQR" />
+                <div class="textContact">
+                  <h4>ASAP Việt Nam</h4>
+                  <p>facebook.com/asapinvietnam</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-register" class="register">
+      <div class="container">
+        <h2 class="title">
+          <span class="highlight">Đăng ký</span> nhận tư vấn
+        </h2>
+        <div class="wrapperContent">
+          <div class="titleRegister">
+            <h2>
+              Vui lòng nhập đầy đủ <span class="new-line"> thông tin</span>
+            </h2>
+          </div>
+          <form id="myForm" class="form">
+            <div class="inputContainer">
+              <p class="textInput">Họ & Tên<span> *</span></p>
+              <input id="name" class="input" placeholder="Nguyễn Văn A" />
+              <span class="error-message" id="name-error">Vui lòng không để trống</span>
+            </div>
+            <div class="inputContainer">
+              <p class="textInput">Năm Sinh</p>
+              <input id="year" class="input" placeholder="1990" />
+            </div>
+            <div class="inputContainer">
+              <p class="textInput">Số Điện Thoại<span> *</span></p>
+              <input id="phone" class="input" placeholder="0123 456 789" />
+              <span class="error-message" id="phone-error">Vui lòng không để trống</span>
+            </div>
+            <div class="inputContainer">
+              <p class="textInput">Địa Chỉ Mail</p>
+              <input id="email" class="input" placeholder="nguyenvana@gmail.com"/>
+            </div>
+            <div class="inputContainer">
+              <p class="textInput">Địa Chỉ<span> *</span></p>
+              <input id="address" class="input" placeholder="123 Đinh Bộ Lĩnh, Tam Kỳ, Biên Hòa, Đồng Nai " />
+              <span class="error-message" id="address-error">Vui lòng không để trống</span>
+            </div>
+            <div class="inputContainer">
+              <p class="textInput">Công Việc Mong Muốn Tìm Kiếm</p>
+              <input id="job" class="input" placeholder="Điện, Điện Tử" />
+            </div>
+            <div class="inputContainer">
+              <div class="btnRegister">
+                <button type="submit" class="btn">
+                  <img src="./image/iconRegister.png" class="icon" />
+                  <p>Xác nhận và gửi đi</p>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2023 · ASAP</p>
+    </footer>
   </body>
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function (event) {
+      const inputs = document.querySelectorAll(".input");
+      let allFilled = true;
+
+      inputs.forEach((input) => {
+        const errorMessageElement = document.getElementById(`${input.id}-error`);
+  
+        if (input.value.trim() === "") {
+          allFilled = false;
+          if (errorMessageElement) {
+            errorMessageElement.style.display = "block";
+          }
+        } else {
+          if (errorMessageElement) {
+            errorMessageElement.style.display = "none";
+          }
+        }
+      });
+
+      if (!allFilled) {
+      event.preventDefault(); 
+    }
+    });
+  </script>
 </html>

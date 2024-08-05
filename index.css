@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --first-font: "Roboto", sans-serif;
@@ -9,7 +12,7 @@
   --bg-dark: #f2bf49;
   --bg-light: #ffdf74;
   --bg-white: #ffffff;
-  --bg-gray: #F8F8F8;
+  --bg-gray: #f8f8f8;
   --br: 4px;
 
   --h1: normal 700 50px / 1.6 var(--first-font);
@@ -43,36 +46,36 @@ body {
   margin-bottom: 30px;
 }
 
-.footer {
+.header {
   background-color: var(--bg-white);
   color: var(--color-black);
   text-align: center;
   padding: 14px 24px 14px 26px;
 }
 
-.footerContainer {
+.headerContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.footerNav {
+.headerNav {
   margin: 20px 0;
 }
 
-.footerNav ul {
+.headerNav ul {
   display: flex;
   list-style-type: none;
   padding: 0;
   gap: 20px;
 }
 
-.footerNav ul li a {
+.headerNav ul li a {
   text-decoration: none;
   font: var(--common-text);
   color: var(--color-black);
 }
-.footerNav ul li a i {
+.headerNav ul li a i {
   padding-left: 4px;
 }
 
@@ -82,7 +85,7 @@ body {
 }
 
 .phoneContainer,
-.footerContact,
+.headerContact,
 .btnContact {
   display: flex;
   align-items: center;
@@ -91,13 +94,14 @@ body {
 .btnContact {
   width: 170px;
   height: 56px;
+  text-decoration: none;
 }
 
 .phoneContainer {
   gap: 8px;
 }
 
-.footerContact {
+.headerContact {
   gap: 20px;
 }
 
@@ -160,33 +164,46 @@ body {
   height: 100%;
   align-items: center;
   justify-content: center;
-  display: flex;  
+  display: flex;
   gap: 12px;
   background-color: var(--bg-dark);
   border-radius: var(--br);
   box-shadow: 8px 8px 8px var(--color-black);
   border: 1px solid var(--color-black);
   color: var(--color-black);
-    font-size: 20px;
-    font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 .btnRegister {
   width: 274px;
   height: 68px;
+  text-decoration: none;
 }
 
 .banner .btnRegister {
   margin-top: 48px;
+  width: 274px;
+  height: 68px;
+  text-decoration: none;
 }
 
 .btn:hover,
 .btnContact:hover {
-  background-color: var(--bg-light);
+  background-color: var(--color-black);
   border-radius: var(--br);
+  color: var(--bg-white);
+  box-shadow: none;
 }
 
-.boxItem {
+.btn:hover img {
+  color: var(--bg-gray);
+}
+
+.banner .boxItem {
   position: relative;
   width: 270px;
   height: 131px;
@@ -230,31 +247,29 @@ body {
   flex-direction: row;
 }
 
-.aboutUs {
+.aboutUs,
+.register {
   display: flex;
   justify-content: center;
   width: 100%;
   text-align: center;
-  background-image: url("./image/backgroundMap.png");
-  background-size: cover;
+  margin-top: 240px;
 }
 
 .aboutUs .container {
   max-width: 1170px;
+  background-image: url("./image/backgroundMap.png");
+  background-size: cover;
 }
 
 .contentItem {
   max-width: 370px;
 }
 
-.wrapperContent {
+.aboutUs .wrapperContent {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-}
-
-.title {
-  margin: 80px 0 56px 0;
 }
 
 .highlight {
@@ -284,25 +299,24 @@ body {
   margin-bottom: 20px;
 }
 
-.titleAboutUs {
-  text-transform: uppercase;
-}
-
 .aboutUs .contentItem .content {
   font: var(--text-p);
   text-align: left;
 }
 
-.proceduce {
+.proceduce,
+.partner {
   display: flex;
   justify-content: center;
   text-align: center;
-  width: 100%;
+  padding: 0 56px;
 }
 
-.proceduce .container {
+.proceduce .container,
+.partner .container {
   background-color: var(--bg-gray);
   width: 1329px;
+  padding: 80px;
 }
 
 .proceduce .contentItem {
@@ -328,11 +342,10 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 32px;
-  padding: 0 80px;
 }
 
-.proceduce .contentUp::after{
-  content: '';
+.proceduce .contentUp::after {
+  content: "";
   position: absolute;
   top: 15px;
   left: 269px;
@@ -343,8 +356,8 @@ body {
   z-index: 10;
 }
 
-.proceduce .contentUp::before{
-  content: '';
+.proceduce .contentUp::before {
+  content: "";
   position: absolute;
   top: 35px;
   left: 270px;
@@ -355,11 +368,18 @@ body {
   z-index: 10;
 }
 
+.proceduce .wrapperContent:nth-child(4) .contentUp::after,
+.proceduce .wrapperContent:last-child .contentUp::after,
+.proceduce .wrapperContent:nth-child(4) .contentUp::before,
+.proceduce .wrapperContent:last-child .contentUp::before {
+  content: unset;
+}
+
 .proceduce .btnProceduce {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 24px 0 80px;
+  margin-top: 24px;
 }
 
 .wrapperTextNumber {
@@ -378,14 +398,14 @@ body {
   text-align: left;
 }
 
-
-.career {
+.career,
+.address {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-.career .titleCareer {
+.title {
   margin-bottom: 56px !important;
   text-transform: uppercase;
   text-align: center;
@@ -400,10 +420,290 @@ body {
 .career .boxContent > .text {
   text-align: center;
   font: var(--common-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  padding: 0 20px;
+  line-height: 1.2;
 }
 
 .career .boxContent {
   background-color: var(--bg-dark);
   border-radius: var(--br);
+  width: 270px;
 }
 
+.career .img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.address .container {
+  max-width: 960px;
+}
+
+.request {
+  background-image: url("./image/backgroundRequest.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 130px 135px 150px;
+}
+
+.request .wrapperContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.request .wrapperContent .boxItem {
+  background-color: var(--bg-white);
+  border: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0 60px;
+  width: none !important;
+  height: none !important;
+  position: relative;
+}
+
+.request .container h3 {
+  position: relative;
+  z-index: 5;
+  margin-top: 60px;
+  line-height: 1.17;
+  height: 30px;
+}
+
+.request .container h3::after {
+  content: "";
+  position: absolute;
+  top: -35px;
+  left: 0px;
+  width: 100%;
+  height: 10px;
+  background-color: var(--bg-dark);
+  z-index: -1;
+}
+
+.request .container p {
+  font: var(--text-p);
+  font-size: 16px;
+}
+
+.picture .content {
+  display: flex;
+  align-items: center;
+  width: auto;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.picture .imageEmployee {
+  object-fit: contain;
+
+  margin-right: 70px;
+}
+
+.new-line {
+  display: block;
+  margin-top: -10px;
+}
+
+.partner .container {
+  border-radius: 20px;
+  padding: 160px 80px 160px;
+}
+
+.partner .content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 30px;
+}
+
+.contact {
+  background-image: url("./image/backgroundContact.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: fill;
+  height: 380px;
+  margin-top: 120px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.contact .boxContact {
+  background-color: var(--bg-white);
+  border-radius: 10px;
+  padding: 17px 24.43px 33px 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  gap: 25px;
+}
+
+.wrapperContact {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 280px;
+  max-width: 970px;
+  column-gap: 30px;
+}
+
+.btnHotline {
+  width: 100%;
+  height: 42px;
+}
+
+.btnHotline .btn {
+  border: transparent;
+  box-shadow: none;
+}
+
+.contentContact {
+  display: flex;
+  align-items: center;
+}
+
+.btnHotline > .btn > .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.contentContact .textContact {
+  margin-left: 14px;
+}
+
+.contentContact .textContact h4 {
+  font-size: 36px;
+}
+
+.contentContact .textContact p {
+  font-size: 15px;
+}
+
+.contact .textContact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact .wrapperContact > .boxContact:last-child .btn {
+  background-color: #3476fa;
+}
+
+.contact .wrapperContact > .boxContact:last-child .btn p {
+  color: var(--bg-white);
+}
+
+.iconQR {
+  width: 65px;
+  height: 65px;
+}
+
+.contact .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact .containerContact {
+  display: flex;
+  justify-content: center;
+}
+
+.contact .iconPhone {
+  width: 31px;
+  height: 50px;
+}
+
+.contact .title {
+  color: var(--bg-white);
+}
+
+.register .container {
+  width: 100%;
+  max-width: 970px;
+}
+
+.register .wrapperContent {
+  background-color: var(--bg-white);
+  border-radius: 34px;
+  border: 9px solid var(--bg-dark);
+  padding: 80px 98px 80px 100px;
+}
+
+.titleRegister {
+  text-transform: uppercase;
+  margin-bottom: 80px !important;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 15.75px;
+}
+
+.inputContainer .input {
+  width: 100%;
+  border-radius: var(--br);
+  border: 1px solid #eeeeee;
+  padding: 21px;
+  outline: none;
+  font-size: 16px;
+  color: #b4b4b4;
+}
+
+.inputContainer .textInput {
+  width: 100%;
+  max-width: 170px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #212529;
+  text-align: left;
+}
+
+.inputContainer span,
+.form span {
+  color: #fd3838;
+}
+
+.form .error-message {
+  display: none;
+  text-align: left;
+  position: absolute;
+  font-size: 13px;
+  top: 48px;
+}
+
+.form .inputContainer:last-child {
+  display: flex;
+  justify-content: center;
+  margin-top: 51px;
+}
+
+footer {
+  padding-bottom: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+}
+
+footer p:last-child {
+  margin-top: 3px;
+  font-size: 0.75rem;
+  line-height: 1.18;
+}
+
+#myForm .inputContainer {
+  position: relative;
+}
